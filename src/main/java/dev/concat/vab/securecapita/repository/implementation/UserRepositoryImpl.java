@@ -40,46 +40,101 @@ public class UserRepositoryImpl implements IUserRepository<User> {
     private final IRoleRepository<Role> iRoleRepository;
     private final BCryptPasswordEncoder encoder;
 
+//    @Override
+//    public User create(User user) {
+//        // Check the email is unique
+//        if(getEmailCount(user.getEmail().trim().toLowerCase()) > 0) throw new ApiException("Email already in use. Please use a different email and try again.");
+//        // Save new user
+//        try{
+//            KeyHolder holder = new GeneratedKeyHolder();
+//            SqlParameterSource parameters= getSqlParameterSource(user);
+//            jdbc.update(INSERT_USER_QUERY,parameters,holder);
+//            user.setId(requireNonNull(holder.getKey().longValue()));
+//            iRoleRepository.addRoleToUser(user.getId(),ROLE_USER.name());
+//            String verificationUrl = getVerificationUrl(UUID.randomUUID().toString(),ACCOUNT.getType());
+//            MapSqlParameterSource paramMaps = new MapSqlParameterSource();
+//            paramMaps.addValue("userId", user.getId());
+//            paramMaps.addValue("url", verificationUrl);
+//            jdbc.update(INSERT_ACCOUNT_VERIFICATION_URL_QUERY, paramMaps);
+//            //????? 3:40:09 / 5:09:32
+////            emailService.sendVerificationUrl(user.getFirstName(),user.getEmail(),verificationUrl,ACCOUNT.getType());
+//            user.setEnabled(false);
+//            user.setNotLocked(true);
+//            return user;
+//        }catch (EmptyResultDataAccessException exception){
+//            throw new ApiException("No role found by name: " + ROLE_USER.name());
+//        }catch (Exception exception){
+//            throw new ApiException("An error occurred. Please try again.");
+//        }
+//        // Add role to the user
+//
+//        // Send verification URL
+//
+//        // Save URL in verification table
+//
+//        // Send email to user with verification URL
+//
+//        // Return the nearly created user
+//
+//
+//        // If any errors, throw exception with proper message
+//    }
+
     @Override
     public User create(User user) {
-        // Check the email is unique
-        if(getEmailCount(user.getEmail().trim().toLowerCase()) > 0) throw new ApiException("Email already in use. Please use a different email and try again.");
-        // Save new user
-        try{
+        checkUniqueEmail(user.getEmail());
+
+        User savedUser = saveUser(user);
+
+        addRoleToNewUser(savedUser);
+
+        String verificationUrl = generateVerificationUrl(savedUser);
+
+        saveVerificationUrl(savedUser, verificationUrl);
+
+        // Send verification email
+        // emailService.sendVerificationUrl(savedUser.getFirstName(), savedUser.getEmail(), verificationUrl, ACCOUNT.getType());
+
+        return savedUser;
+    }
+
+    private void checkUniqueEmail(String email) {
+        if (getEmailCount(email) > 0) {
+            throw new ApiException("Email already in use. Please use a different email and try again.");
+        }
+    }
+
+    private User saveUser(User user) {
+        try {
             KeyHolder holder = new GeneratedKeyHolder();
-            SqlParameterSource parameters= getSqlParameterSource(user);
-            jdbc.update(INSERT_USER_QUERY,parameters,holder);
+            SqlParameterSource parameters = getSqlParameterSource(user);
+            jdbc.update(INSERT_USER_QUERY, parameters, holder);
             user.setId(requireNonNull(holder.getKey().longValue()));
-            iRoleRepository.addRoleToUser(user.getId(),ROLE_USER.name());
-            String verificationUrl = getVerificationUrl(UUID.randomUUID().toString(),ACCOUNT.getType());
-            MapSqlParameterSource paramMap = new MapSqlParameterSource();
-            paramMap.addValue("userId", user.getId());
-            paramMap.addValue("url", verificationUrl);
-            jdbc.update(INSERT_VERIFICATION_URL_QUERY, paramMap);
-            //????? 3:40:09 / 5:09:32
-//            emailService.sendVerificationUrl(user.getFirstName(),user.getEmail(),verificationUrl,ACCOUNT.getType());
             user.setEnabled(false);
             user.setNotLocked(true);
             return user;
-        }catch (EmptyResultDataAccessException exception){
-            throw new ApiException("No role found by name: " + ROLE_USER.name());
-        }catch (Exception exception){
-            throw new ApiException("An error occurred. Please try again.");
+        } catch (Exception exception) {
+            throw new ApiException("An error occurred while saving the user. Please try again.");
         }
-        // Add role to the user
+    }
 
-        // Send verification URL
+    private void addRoleToNewUser(User user) {
+        try {
+            iRoleRepository.addRoleToUser(user.getId(), ROLE_USER.name());
+        } catch (Exception exception) {
+            throw new ApiException("An error occurred while adding a role to the user. Please try again.");
+        }
+    }
 
-        // Save URL in verification table
+    private String generateVerificationUrl(User user) {
+        return getVerificationUrl(UUID.randomUUID().toString(), ACCOUNT.getType());
+    }
 
-        // Send email to user with verification URL
-
-        // Return the nearly created user
-
-
-        // If any errors, throw exception with proper message
-
-        return null;
+    private void saveVerificationUrl(User user, String verificationUrl) {
+        MapSqlParameterSource paramMaps = new MapSqlParameterSource();
+        paramMaps.addValue("userId", user.getId());
+        paramMaps.addValue("url", verificationUrl);
+        jdbc.update(INSERT_ACCOUNT_VERIFICATION_URL_QUERY, paramMaps);
     }
 
     private SqlParameterSource getSqlParameterSource(User user) {
