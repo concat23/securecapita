@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8803c6e-93fb-40c6-a14b-a1de132f4c0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/config/EmailConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/entity/ConfirmationEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/repository/IConfirmationEntityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/repository/IUserEntityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/resource/UserEntityResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/IEmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/IUserEntityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/UserEntityServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/securecapita.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/domain/HttpResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/domain/HttpResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +97,7 @@
       <workItem from="1698086809847" duration="238000" />
       <workItem from="1698087116873" duration="85000" />
       <workItem from="1698154936183" duration="17447000" />
-      <workItem from="1698764081034" duration="14735000" />
+      <workItem from="1698764081034" duration="15033000" />
     </task>
     <servers />
   </component>
