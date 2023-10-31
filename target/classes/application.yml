@@ -1,24 +1,36 @@
 spring:
-  autoconfigure:
-    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3311/securecapita_db
-    password: letmein
-    username: root
-  jpa:
-    database-platform: org.hibernate.dialect.MySQL8InnoDBDialect
-    generate-ddl: true
-    show-sql: true
-    hibernate:
-      ddl-auto: update
+  mail:
+    host: ${EMAIL_HOST}
+    port: ${EMAIL_PORT}
+    username: ${EMAIL_ID}
+    password: ${EMAIL_PASSWORD}
+    default-encoding: UTF-8
     properties:
-      hibernate:
-        globally_quoted_indentifiers: true
-        dialect: org.hibernate.dialect.MySQL8Dialect
-        format_sql: true
-  sql:
-      init:
-        mode: always
-        continue-on-error: false
-server:
-  port: 8097
+      mail:
+        mime:
+          charset: UTF
+        smtp:
+          writetimeout: 16000
+          connectiontimeout: 10000
+          timeout: 10000
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    verify:
+      host: ${VERIFY_EMAIL_HOST}
+  profiles:
+#    active: ${ACTIVE_PROFILE:dev}
+    active: dev
+application:
+  title: Secure Capita
+  version: 1.0
+
+
+SERVER_PORT: 8097
+
+EMAIL_HOST: smpt.gmail.com
+EMAIL_PORT: 587
+EMAIL_ID: <YOUR EMAIL ADDRESS>
+EMAIL_PASSWORD: <YOUR APP ADDRESS>
+VERIFY_EMAIL_HOST: http://localhost:${SERVER_PORT}
