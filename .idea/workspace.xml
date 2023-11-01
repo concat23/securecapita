@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8803c6e-93fb-40c6-a14b-a1de132f4c0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/utils/EmailUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/email-template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/config/EmailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/config/EmailConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/securecapita.iml" beforeDir="false" afterPath="$PROJECT_DIR$/securecapita.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/config/EmailConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/config/EmailConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/UserEntityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/UserEntityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/utils/EmailUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/utils/EmailUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/email-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/email-template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/banner.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/service/implementation/UserEntityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/service/implementation/UserEntityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/utils/EmailUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/utils/EmailUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/email-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/email-template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,6 +50,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -114,7 +110,7 @@
       <workItem from="1698087116873" duration="85000" />
       <workItem from="1698154936183" duration="17447000" />
       <workItem from="1698764081034" duration="15365000" />
-      <workItem from="1698841915063" duration="12058000" />
+      <workItem from="1698841915063" duration="23526000" />
     </task>
     <servers />
   </component>
@@ -132,5 +128,49 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/utils/EmailUtils.java</url>
+          <line>17</line>
+          <properties class="dev.concat.vab.securecapita.utils.EmailUtils" method="getEmailMessageText">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

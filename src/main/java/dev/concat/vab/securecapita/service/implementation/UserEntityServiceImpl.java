@@ -37,7 +37,10 @@ public class UserEntityServiceImpl implements IUserEntityService {
         iConfirmationEntityRepository.save(confirmation);
 
         // To do send email to user with token
-        iEmailService.sendSimpleMailMessage(user.getName(),user.getEmail(),confirmation.getToken());
+        //iEmailService.sendSimpleMailMessage(user.getName(),user.getEmail(),confirmation.getToken());
+        //iEmailService.sendMimeMessageWithAttachments(user.getName(),user.getEmail(),confirmation.getToken());
+        //iEmailService.sendHtmlMail(user.getName(),user.getEmail(),confirmation.getToken());
+        iEmailService.sendHtmlMailWithEmbeddedFiles(user.getName(),user.getEmail(),confirmation.getToken());
         return user;
     }
 
