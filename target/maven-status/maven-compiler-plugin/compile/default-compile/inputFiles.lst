@@ -13,6 +13,7 @@ D:\ProgrammingLanguage\Java\securecapita\securecapita\src\main\java\dev\concat\v
 D:\ProgrammingLanguage\Java\securecapita\securecapita\src\main\java\dev\concat\vab\securecapita\config\SecureCapitaConfig.java
 D:\ProgrammingLanguage\Java\securecapita\securecapita\src\main\java\dev\concat\vab\securecapita\repository\IConfirmationEntityRepository.java
 D:\ProgrammingLanguage\Java\securecapita\securecapita\src\main\java\dev\concat\vab\securecapita\domain\User.java
+D:\ProgrammingLanguage\Java\securecapita\securecapita\src\main\java\dev\concat\vab\securecapita\utils\EmailUtils.java
 D:\ProgrammingLanguage\Java\securecapita\securecapita\src\main\java\dev\concat\vab\securecapita\service\IUserEntityService.java
 D:\ProgrammingLanguage\Java\securecapita\securecapita\src\main\java\dev\concat\vab\securecapita\resource\UserResource.java
 D:\ProgrammingLanguage\Java\securecapita\securecapita\src\main\java\dev\concat\vab\securecapita\rowmapper\RoleRowMapper.java

@@ -26,3 +26,9 @@ server:
   port: 8097
 
 ACTIVE_PROFILE: test
+
+EMAIL_HOST: smpt.gmail.com
+EMAIL_PORT: 587
+EMAIL_ID: ngom3793@gmail.com
+EMAIL_PASSWORD: zlcl qfyo jpbb rpwt
+VERIFY_EMAIL_HOST: http://localhost:${SERVER_PORT}

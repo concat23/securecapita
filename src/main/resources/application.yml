@@ -1,4 +1,19 @@
 spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3311/securecapita_db
+    password: letmein
+    username: root
+  jpa:
+      database-platform: org.hibernate.dialect.MySQL8InnoDBDialect
+      generate-ddl: true
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          globally_quoted_indentifiers: true
+          dialect: org.hibernate.dialect.MySQL8Dialect
+          format_sql: true
   mail:
     host: ${EMAIL_HOST}
     port: ${EMAIL_PORT}
@@ -26,11 +41,14 @@ application:
   title: Secure Capita
   version: 1.0
 
+#SERVER_PORT: 8097
+#server:
+#  port: ${SERVER_PORT:8097}
 
 SERVER_PORT: 8097
 
 EMAIL_HOST: smpt.gmail.com
 EMAIL_PORT: 587
-EMAIL_ID: anhbangluckystar@gmail.com
-EMAIL_PASSWORD: <YOUR APP ADDRESS>
+EMAIL_ID: ngom3793@gmail.com
+EMAIL_PASSWORD: zlcl qfyo jpbb rpwt
 VERIFY_EMAIL_HOST: http://localhost:${SERVER_PORT}

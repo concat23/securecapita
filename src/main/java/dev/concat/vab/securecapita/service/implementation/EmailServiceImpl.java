@@ -1,6 +1,7 @@
 package dev.concat.vab.securecapita.service.implementation;
 
 import dev.concat.vab.securecapita.service.IEmailService;
+import dev.concat.vab.securecapita.utils.EmailUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,7 +30,8 @@ public class EmailServiceImpl implements IEmailService {
             message.setSubject(NEW_USER_ACCOUNT_VERIFICATION);
             message.setFrom(fromEmail);
             message.setTo(to);
-            message.setText("Hey, this is working hahaha");
+            //message.setText("Hey, this is working hahaha");
+            message.setText(EmailUtils.getEmailMessageText(name,host,token));
             javaMailSender.send(message);
         }catch (Exception exc){
             System.out.println(exc.getMessage());

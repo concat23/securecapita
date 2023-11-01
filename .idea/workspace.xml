@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8803c6e-93fb-40c6-a14b-a1de132f4c0e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/utils/EmailUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/email-template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/config/EmailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/config/EmailConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/config/EmailConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/config/EmailConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/concat/vab/securecapita/service/implementation/EmailServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +34,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -31,6 +48,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -52,15 +70,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,7 +113,8 @@
       <workItem from="1698086809847" duration="238000" />
       <workItem from="1698087116873" duration="85000" />
       <workItem from="1698154936183" duration="17447000" />
-      <workItem from="1698764081034" duration="15033000" />
+      <workItem from="1698764081034" duration="15365000" />
+      <workItem from="1698841915063" duration="12058000" />
     </task>
     <servers />
   </component>

@@ -29,6 +29,7 @@ dev\concat\vab\securecapita\service\implementation\UserEntityServiceImpl.class
 dev\concat\vab\securecapita\rowmapper\RoleRowMapper.class
 dev\concat\vab\securecapita\domain\Role$1.class
 dev\concat\vab\securecapita\service\IUserEntityService.class
+dev\concat\vab\securecapita\utils\EmailUtils.class
 dev\concat\vab\securecapita\service\IEmailService.class
 dev\concat\vab\securecapita\service\IUserService.class
 dev\concat\vab\securecapita\entity\ConfirmationEntity$ConfirmationEntityBuilder.class
