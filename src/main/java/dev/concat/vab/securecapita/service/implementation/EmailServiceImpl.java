@@ -3,6 +3,8 @@ package dev.concat.vab.securecapita.service.implementation;
 import dev.concat.vab.securecapita.service.IEmailService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.juli.logging.LogFactory;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.SimpleMailMessage;
@@ -31,11 +33,10 @@ import static dev.concat.vab.securecapita.utils.EmailUtils.getVerificationUrl;
 @Slf4j
 @RequiredArgsConstructor
 public class EmailServiceImpl implements IEmailService {
-
     private static final String NEW_USER_ACCOUNT_VERIFICATION = "New User Account Verification";
     private static final String UTF_8_ENCODING = "UTF-8";
     private static final String EMAIL_TEMPLATE = "email-template";
-    private static final String TEXT_HTML_ENCODING = "";
+    private static final String TEXT_HTML_ENCODING = "text/html; charset=UTF-8";
     @Value("${spring.mail.verify.host}")
     private String host;
     @Value("${spring.mail.username}")
@@ -166,6 +167,7 @@ public class EmailServiceImpl implements IEmailService {
             context.setVariable("url",getVerificationUrl(host,token));
             String text = templateEngine.process(EMAIL_TEMPLATE,context);
             MimeMessage message = getMimeMessage();
+            message.setHeader("Content-Type", "text/html; charset=UTF-8");
             MimeMessageHelper messageHelper = new MimeMessageHelper(message,true,UTF_8_ENCODING);
             messageHelper.setPriority(1);
 
@@ -182,11 +184,14 @@ public class EmailServiceImpl implements IEmailService {
             mimeMultipart.addBodyPart(bodyPart);
 
             BodyPart imageBodyPart = new MimeBodyPart();
+            // Window
             DataSource dataSource = new FileDataSource(System.getProperty("user.home") + "/Downloads/images/item-empty.png");
             imageBodyPart.setDataHandler(new DataHandler(dataSource));
-            imageBodyPart.setHeader("Content-ID","<image>");
+            imageBodyPart.setHeader("Content-Type", "image/jpeg");
+            imageBodyPart.setFileName("image.png"); // Specify the image file name
             mimeMultipart.addBodyPart(imageBodyPart);
-
+            System.out.println("Email sent successfully.");
+            log.info("Email sent successfully.");
             message.setContent(mimeMultipart);
 
             mailSender.send(message);
