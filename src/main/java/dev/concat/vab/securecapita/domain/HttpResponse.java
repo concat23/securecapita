@@ -17,5 +17,7 @@ public class HttpResponse {
     protected String reason;
     protected String message;
     protected String developerMessage;
+    protected String path;
+    protected String requestMethod;
     protected Map<?,?> data;
 }
